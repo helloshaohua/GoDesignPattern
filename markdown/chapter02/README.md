@@ -33,6 +33,7 @@ func (p *Person) Eat() {
 	fmt.Println(p.name + "在吃饭")
 }
 ```
+
 - **_继承_**：使用内嵌的方式，对结构体struct进行组合。
 ```go
 type Person struct {
@@ -52,6 +53,7 @@ func (c *Chinese) GetSkin() string {
 	return c.skin
 }
 ```
+
 - **_多态_**：使用interface来实现。
 ```go
 type Human interface {
