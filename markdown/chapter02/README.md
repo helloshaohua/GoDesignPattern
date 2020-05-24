@@ -1,10 +1,10 @@
-## OOP基础
+# OOP基础
 
 - 类与对象。
 - 三大基本特性。
 - 五大基本原则。
 
-### Go中的类与对象
+## Go中的类与对象
 
 Go中用结构体模拟类与对象。
 
@@ -21,9 +21,10 @@ func (b *Bike) Move() string {
 }
 ```
 
-### Go中的三大基本特性
+## Go中的三大基本特性
 
 - **_封装_**：首字母大小写方式代表公有私有权限。
+
 ```go
 type Person struct {
 	name string
@@ -35,6 +36,7 @@ func (p *Person) Eat() {
 ```
 
 - **_继承_**：使用内嵌的方式，对结构体struct进行组合。
+
 ```go
 type Person struct {
 	name string
@@ -55,6 +57,7 @@ func (c *Chinese) GetSkin() string {
 ```
 
 - **_多态_**：使用interface来实现。
+
 ```go
 type Human interface {
 	Speck()
@@ -79,7 +82,7 @@ func (c *Chinese) Speck() {
 }
 ```
 
-### 回顾下五大基本原则
+## 回顾下五大基本原则
 
 - 单一功能原则。
 对象应该具有单一功能。比如说人类，不能将`走路`和`跳跃`定义为一个方法。
@@ -92,9 +95,10 @@ func (c *Chinese) Speck() {
 - 依赖反转原则。
 就是不要依赖具体的实现，要去面向接口去开发。
 
-#### 单一功能原则和开闭原则示例
+### 单一功能原则和开闭原则示例
 
 - 不合理的设计
+
 ```go
 type Bike struct{}
 
@@ -124,7 +128,9 @@ func (p *Person) By(action string) {
 }
 ```
 看到上面代码Person的By方法了没有，它通过传入action参数，去调用不同交通工具的移动Move方法，其实这样的设计是违反了`单一功能原则`，就是这个By方法它有两层意思，也违反了`开闭原则`，就是说我要增加一个交通工具如`地铁`，还要再增加一个`case`，可以通过下面的方式去避免。
+
 - 合理的设计
+
 ```go
 type Bike struct{}
 
