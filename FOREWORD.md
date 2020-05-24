@@ -1,5 +1,5 @@
 # 《GO设计模式》
-这是一本开源的Go语言设计模式的图书，帮助大学学习Go语言设计模式，欢迎加入~
+这是一本开源的Go语言设计模式的笔记，视频原链接为慕课网[《Go设计模式入门到实践》](https://www.imooc.com/learn/1226)，欢迎加入~
 
 # 项目地址（欢迎勘误或投稿）
 [GitHub](https://github.com/wumoxi/GoDesignPattern)
